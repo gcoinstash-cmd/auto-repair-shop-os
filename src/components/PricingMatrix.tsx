@@ -44,14 +44,14 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
             <div className="inline-flex items-center space-x-2 text-xs font-mono text-accent-orange bg-accent-orange/5 px-3 py-1 rounded-full uppercase">
               <span>[ COST TRANSPARENCY ]</span>
             </div>
-            <span className="inline-flex items-center px-2.5 py-1 rounded text-[10px] bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans max-w-md text-left leading-normal">
+            <span className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans max-w-md text-left leading-normal">
               ⚠️ Reseller Note: All vehicle makes, pricing tiers, and performance services are 100% customizable via our central data configuration file.
             </span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
             Performance Pricing Matrix
           </h2>
-          <p className="text-zinc-500 font-sans text-sm font-light">
+          <p className="text-zinc-300 font-sans text-sm font-light">
             Review detailed service breakdowns for street, signature tuning, and performance racing scopes. No obscure additions; clear estimates provided.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
                 <div className="space-y-6">
                   {/* Name Price */}
                   <div className="space-y-2">
-                    <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest block">
+                    <span className="font-mono text-xs text-zinc-300 uppercase tracking-widest block">
                       PACKAGE 0{idx + 1}
                     </span>
                     <h3 className="font-display text-xl font-bold uppercase text-white">
@@ -98,12 +98,12 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
                   {/* Gigantic Price tag */}
                   <div className="flex items-baseline font-display">
                     <span className="text-4xl sm:text-5xl font-black text-white">{tier.price}</span>
-                    <span className="text-xs text-zinc-500 font-mono uppercase ml-2 tracking-widest">/ flat rate</span>
+                    <span className="text-xs text-zinc-300 font-mono uppercase ml-2 tracking-widest">/ flat rate</span>
                   </div>
 
                   {/* Feature inclusions */}
                   <div className="space-y-3.5 pt-6 border-t border-neutral-900/80">
-                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">
+                    <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest block">
                       Calibrated Inclusions:
                     </span>
                     <ul className="space-y-2.5 text-xs text-zinc-300 font-sans">
@@ -146,7 +146,7 @@ export default function PricingMatrix({ onSelectPackageService, packages }: Pric
               <ShieldCheck className="h-5 w-5 text-accent-orange" />
               Need Bespoke Racing Engine Configurations?
             </h4>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+            <p className="text-base text-zinc-200 leading-relaxed font-light leading-relaxed">
               For complete turbo retrofits, full engine rebuilds, or standalone Haltech/Motec ECU configurations, we configure custom bespoke hourly telemetry estimates.
             </p>
           </div>

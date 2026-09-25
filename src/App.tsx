@@ -474,17 +474,17 @@ export default function App() {
               <div className="border-b border-neutral-900 pb-3">
                 <div className="flex items-center space-x-2 text-accent-orange">
                   <Sliders className="h-4 w-4" />
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-wider">Agency Reseller Sandbox</span>
+                  <span className="font-mono text-xs font-semibold tracking-wider font-bold uppercase tracking-wider">Agency Reseller Sandbox</span>
                 </div>
                 <h4 className="font-display font-medium text-white text-sm mt-1 uppercase">Instant color and branding switcher</h4>
-                <p className="mt-2 text-[11px] text-zinc-400 font-sans leading-relaxed">
+                <p className="mt-2 text-xs font-semibold text-zinc-400 font-sans leading-relaxed">
                   💡 Reseller Tip: This premium dark aesthetic and advanced telemetry tracking are optimally engineered to target high-ticket automotive niches—such as exotic detailing studios, ECU remapping labs, EV calibration centers, and performance tuning garages.
                 </p>
               </div>
 
               {/* Archetype Preset Selector */}
               <div className="space-y-1.5 pt-1">
-                <label className="block text-[10px] font-mono text-zinc-500 uppercase tracking-wider">0. Shop Niche Preset</label>
+                <label className="block text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-wider">0. Shop Niche Preset</label>
                 <select
                   value={activePreset}
                   onChange={(e) => handlePresetChange(e.target.value as any)}
@@ -494,14 +494,14 @@ export default function App() {
                   <option value="ev">EcoEV Labs (Electric / Eco Labs)</option>
                   <option value="fleet">Fleet Iron (Fleet & Heavy Duty)</option>
                 </select>
-                <span className="block text-[8px] text-zinc-500 font-sans leading-normal">
+                <span className="block text-[8px] text-zinc-300 font-sans leading-normal">
                   *Selecting a Preset swaps hero titles, customized pricing structures, and services lists instantly.
                 </span>
               </div>
 
               {/* Dynamic Theme Colors presets */}
               <div className="space-y-2">
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider block">1. Color Identity</span>
+                <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-wider block">1. Color Identity</span>
                 <div className="grid grid-cols-4 gap-2">
                   {colorPresets.map((preset) => (
                     <button
@@ -524,14 +524,14 @@ export default function App() {
                     </button>
                   ))}
                 </div>
-                <span className="block text-[10px] text-zinc-400 font-mono italic">
+                <span className="block text-xs font-semibold tracking-wider text-zinc-400 font-mono italic">
                   Active Palette: <span className="text-accent-orange font-bold font-sans uppercase">{accentLabel}</span>
                 </span>
               </div>
 
               {/* Dynamic Shop Name Overrides */}
               <div className="space-y-1.5 pt-2 border-t border-neutral-900/40">
-                <label className="block text-[10px] font-mono text-zinc-500 uppercase tracking-wider">2. Shop Name (Branding)</label>
+                <label className="block text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-wider">2. Shop Name (Branding)</label>
                 <input
                   type="text"
                   value={shopName}
@@ -543,7 +543,7 @@ export default function App() {
 
               {/* Dynamic Phone Override */}
               <div className="space-y-1.5">
-                <label className="block text-[10px] font-mono text-zinc-500 uppercase tracking-wider">3. Dedicated Phone Tag</label>
+                <label className="block text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-wider">3. Dedicated Phone Tag</label>
                 <input
                   type="text"
                   value={customPhone}
@@ -553,7 +553,7 @@ export default function App() {
                 />
               </div>
 
-              <div className="rounded-lg bg-neutral-950 p-3 text-[10px] text-zinc-500 space-y-1 leading-normal border border-neutral-900 font-sans">
+              <div className="rounded-lg bg-neutral-950 p-3 text-xs font-semibold tracking-wider text-zinc-300 space-y-1 leading-normal border border-neutral-900 font-sans">
                 <p className="text-zinc-400 uppercase font-bold text-[9px] font-mono">Reselling Value Proposition:</p>
                 <p className="font-light">Demonstrate customization capabilities to local mechanic buyers live. Change colors and labels in seconds with no code rebuild.</p>
               </div>
@@ -625,11 +625,11 @@ export default function App() {
                 </span>
                 <span>{shopName.toUpperCase()}</span>
               </div>
-              <p className="font-light max-w-md leading-relaxed text-zinc-500 text-[11px]">
+              <p className="font-light max-w-md leading-relaxed text-zinc-300 text-xs font-semibold">
                 High-performance exotics tuning, dyno ECU diagnostic calibration, 3-stage orbital paint correction, coilovers balancing alignment, and track preparation audits. Built for automotive purists.
               </p>
               
-              <div className="space-y-2 pt-2 text-[11px] font-mono text-zinc-500">
+              <div className="space-y-2 pt-2 text-xs font-semibold font-mono text-zinc-300">
                 <p className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-accent-orange shrink-0" />
                   <span>4108 Apex Runway, Culver City, CA 90232</span>
@@ -648,19 +648,19 @@ export default function App() {
             {/* Quick Links Column */}
             <div className="md:col-span-3 space-y-4">
               <h5 className="font-display text-xs font-bold uppercase tracking-wider text-white">Garage Navigation</h5>
-              <div className="grid grid-cols-2 gap-2 text-[11px] font-mono font-medium">
-                <button onClick={() => handleNavigate('services')} className="text-zinc-500 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Capabilities</button>
-                <button onClick={() => handleNavigate('booking')} className="text-zinc-500 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Scheduler</button>
-                <button onClick={() => handleNavigate('tracker')} className="text-zinc-500 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Telemetry</button>
-                <button onClick={() => handleNavigate('pricing')} className="text-zinc-500 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Matrices</button>
-                <button onClick={() => handleNavigate('reviews')} className="text-zinc-500 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Reviews</button>
+              <div className="grid grid-cols-2 gap-2 text-xs font-semibold font-mono font-medium">
+                <button onClick={() => handleNavigate('services')} className="text-zinc-300 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Capabilities</button>
+                <button onClick={() => handleNavigate('booking')} className="text-zinc-300 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Scheduler</button>
+                <button onClick={() => handleNavigate('tracker')} className="text-zinc-300 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Telemetry</button>
+                <button onClick={() => handleNavigate('pricing')} className="text-zinc-300 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Matrices</button>
+                <button onClick={() => handleNavigate('reviews')} className="text-zinc-300 hover:text-accent-orange text-left uppercase transition-colors cursor-pointer">Reviews</button>
               </div>
             </div>
 
             {/* Terminal Schedule status */}
             <div className="md:col-span-4 space-y-4">
               <h5 className="font-display text-xs font-bold uppercase tracking-wider text-white">Operations telemetry</h5>
-              <div className="space-y-3 font-mono text-[11px] text-zinc-500 leading-normal">
+              <div className="space-y-3 font-mono text-xs font-semibold text-zinc-300 leading-normal">
                 <div className="flex justify-between border-b border-neutral-900 pb-1.5">
                   <span>MONDAY - FRIDAY</span>
                   <span className="text-zinc-300">08:30 AM - 06:00 PM</span>
@@ -678,7 +678,7 @@ export default function App() {
           </div>
 
           {/* Bottom attribution copyright row */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-mono text-zinc-600">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold tracking-wider font-mono text-zinc-600">
             <div className="flex items-center space-x-1.5">
               <span>© {new Date().getFullYear()} {shopName}. All diagnostic rights registered.</span>
               <span className="hidden sm:inline">|</span>
@@ -688,11 +688,11 @@ export default function App() {
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 select-none text-[10px]">
+            <div className="flex items-center gap-1.5 select-none text-xs font-semibold tracking-wider">
               <span>Assembled with</span>
               <Heart className="h-3 w-3 text-red-500 fill-red-500" />
               <span>for Agency Resellers</span>
-              <ExternalLink className="h-3 w-3 text-zinc-500" />
+              <ExternalLink className="h-3 w-3 text-zinc-300" />
             </div>
           </div>
 

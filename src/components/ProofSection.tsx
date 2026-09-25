@@ -30,7 +30,7 @@ export default function ProofSection() {
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
             Before & After Results Grid
           </h2>
-          <p className="text-zinc-500 font-sans text-sm font-light">
+          <p className="text-zinc-300 font-sans text-sm font-light">
             Don't take our word for it. Review certified mechanical telemetry reports, paint correction, and structural results. Drag the slider below to test the finish.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function ProofSection() {
                 className="absolute inset-0 w-full h-full object-cover grayscale brightness-90 contrasts-125"
               />
               {/* After label */}
-              <div className="absolute bottom-4 right-4 z-20 bg-emerald-500/90 text-black font-mono text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-emerald-400 shadow-lg select-none">
+              <div className="absolute bottom-4 right-4 z-20 bg-emerald-500/90 text-black font-mono text-xs font-semibold tracking-wider font-bold uppercase px-2.5 py-1 rounded border border-emerald-400 shadow-lg select-none">
                 AFTER // TREATED
               </div>
 
@@ -74,7 +74,7 @@ export default function ProofSection() {
                 />
               </div>
               {/* Before label */}
-              <div className="absolute bottom-4 left-4 z-20 bg-neutral-950/90 text-zinc-400 font-mono text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-neutral-800 shadow-lg select-none">
+              <div className="absolute bottom-4 left-4 z-20 bg-neutral-950/90 text-zinc-400 font-mono text-xs font-semibold tracking-wider font-bold uppercase px-2.5 py-1 rounded border border-neutral-800 shadow-lg select-none">
                 BEFORE // INTAKE
               </div>
 
@@ -105,7 +105,7 @@ export default function ProofSection() {
             </div>
 
             {/* Slider help prompt */}
-            <div className="flex justify-between items-center text-xs font-mono text-zinc-500 bg-[#101115] border border-neutral-900 p-4 rounded-xl">
+            <div className="flex justify-between items-center text-xs font-mono text-zinc-300 bg-[#101115] border border-neutral-900 p-4 rounded-xl">
               <span className="flex items-center gap-1.5 uppercase">
                 <MessageSquare className="h-4 w-4 text-accent-orange" />
                 Active Vehicle Context:
@@ -150,7 +150,7 @@ export default function ProofSection() {
                           <Star key={rIdx} className="h-3.5 w-3.5 text-accent-amber fill-accent-amber" />
                         ))}
                       </div>
-                      <span className="font-mono text-[10px] text-zinc-500 uppercase">
+                      <span className="font-mono text-xs font-semibold tracking-wider text-zinc-300 uppercase">
                         {review.date}
                       </span>
                     </div>
@@ -159,7 +159,7 @@ export default function ProofSection() {
                       <h4 className="font-display text-sm font-bold text-white uppercase tracking-wide">
                         {review.author}
                       </h4>
-                      <p className="font-mono text-[10px] text-accent-orange uppercase flex items-center gap-1">
+                      <p className="font-mono text-xs font-semibold tracking-wider text-accent-orange uppercase flex items-center gap-1">
                         <span>{review.vehicle}</span>
                         <span className="text-zinc-600">•</span>
                         <span className="text-zinc-400 font-sans italic">{review.type}</span>

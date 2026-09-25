@@ -35,7 +35,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 rounded-full border border-accent-orange/20 bg-accent-orange/5 px-3 py-1 text-[11px] font-mono tracking-wider text-accent-orange uppercase"
+              className="inline-flex items-center space-x-2 rounded-full border border-accent-orange/20 bg-accent-orange/5 px-3 py-1 text-xs font-semibold font-mono tracking-wider text-accent-orange uppercase"
             >
               <span className="h-2 w-2 rounded-full bg-accent-orange animate-pulse"></span>
               <span>{tagline || 'Hyper-Precision Garage & Tuning Lab'}</span>
@@ -115,7 +115,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
                   <span className="text-2xl font-bold font-display">{baysAvailable}</span>
                   <span className="text-zinc-600 text-sm ml-0.5">/5</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Service Bays Open</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Service Bays Open</p>
               </div>
 
               <div className="space-y-1">
@@ -123,7 +123,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
                   <span className="text-2xl font-bold font-display">2.8k</span>
                   <span className="text-accent-orange text-sm ml-0.5">+</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Retunings Logged</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Retunings Logged</p>
               </div>
 
               <div className="space-y-1">
@@ -131,7 +131,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
                   <span className="text-2xl font-bold font-display">99.8</span>
                   <span className="text-zinc-600 text-sm ml-0.5">%</span>
                 </div>
-                <p className="text-[10px] uppercase text-zinc-500 tracking-wider">Quality Score</p>
+                <p className="text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-wider">Quality Score</p>
               </div>
             </motion.div>
           </div>
@@ -159,7 +159,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
                 
                 {/* Tech Dashboard floating tag inside image for "Wow" feel */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl border border-white/5 bg-black/75 backdrop-blur-md space-y-2">
-                  <div className="flex items-center justify-between text-[10px] font-mono text-zinc-500 uppercase">
+                  <div className="flex items-center justify-between text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase">
                     <span>DIAGNOSTICS &</span>
                     <span className="text-accent-orange animate-pulse">Live Dyno Feed</span>
                   </div>
@@ -182,7 +182,7 @@ export default function Hero({ onNavigate, baysAvailable, heroTitle, heroSubtext
         <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#0A0B0E] to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#0A0B0E] to-transparent z-10 pointer-events-none" />
         
-        <div className="animate-marquee whitespace-nowrap flex select-none text-xs font-mono font-bold tracking-widest text-zinc-500">
+        <div className="animate-marquee whitespace-nowrap flex select-none text-xs font-mono font-bold tracking-widest text-zinc-300">
           {brands.map((brand, i) => (
             <span key={i} className="mx-8 uppercase hover:text-accent-orange transition-colors">
               {brand}

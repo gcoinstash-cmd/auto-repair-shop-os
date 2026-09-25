@@ -51,17 +51,17 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
             <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-accent-orange uppercase tracking-widest">
               <span>[ PERFORMANCE SPECTRUM ]</span>
               <span className="hidden sm:inline text-zinc-700">//</span>
-              <span className="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded text-[10px] bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans tracking-normal normal-case">
+              <span className="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans tracking-normal normal-case">
                 ⚠️ Reseller Note: All vehicle makes, pricing tiers, and performance services are 100% customizable via our central data configuration file.
               </span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
               Bespoke Garage & Tuning Services
             </h2>
-            <p className="text-zinc-500 font-sans text-sm font-light">
+            <p className="text-zinc-300 font-sans text-sm font-light">
               We operate a state-of-the-art facility tailored for high-performance exotics, racing platforms, and luxury touring models. Explore our modular capabilities.
             </p>
-            <div className="sm:hidden mt-2 p-2.5 rounded text-[10px] bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans tracking-normal leading-normal">
+            <div className="sm:hidden mt-2 p-2.5 rounded text-xs font-semibold tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 font-sans tracking-normal leading-normal">
               ⚠️ Reseller Note: All vehicle makes, pricing tiers, and performance services are 100% customizable via our central data configuration file.
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/80 text-accent-orange group-hover:bg-accent-orange group-hover:text-black transition-all duration-300 shadow-md">
                       {renderIcon(service.icon)}
                     </div>
-                    <span className="font-mono text-xs text-zinc-500 bg-neutral-900 px-2.5 py-1 rounded-md border border-neutral-900 uppercase">
+                    <span className="font-mono text-xs text-zinc-300 bg-neutral-900 px-2.5 py-1 rounded-md border border-neutral-900 uppercase">
                       {service.category}
                     </span>
                   </div>
@@ -131,12 +131,12 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
                 {/* technical meta metrics bottom row */}
                 <div className="pt-6 mt-6 border-t border-neutral-900/60 flex items-center justify-between relative z-10 font-mono">
                   <div className="flex flex-col">
-                    <span className="text-[10px] text-zinc-600 uppercase">Estd Price</span>
+                    <span className="text-xs font-semibold tracking-wider text-zinc-600 uppercase">Estd Price</span>
                     <span className="text-sm font-bold text-white font-display">from ${service.estimatePrice}</span>
                   </div>
 
                   <div className="flex flex-col items-center">
-                    <span className="text-[10px] text-zinc-600 uppercase">Est Time</span>
+                    <span className="text-xs font-semibold tracking-wider text-zinc-600 uppercase">Est Time</span>
                     <span className="text-xs text-zinc-400 flex items-center gap-1">
                       <Clock className="h-3 w-3 text-accent-orange" />
                       {service.duration}
@@ -158,7 +158,7 @@ export default function ServicesGrid({ onSelectService, services }: ServicesGrid
 
         {/* Info callout footer */}
         <div className="mt-12 text-center">
-          <p className="inline-flex flex-col sm:flex-row sm:items-center justify-center gap-2 rounded-full border border-neutral-900 bg-neutral-950 px-6 py-2.5 text-xs text-zinc-400 font-mono">
+          <p className="inline-flex flex-col sm:flex-row sm:items-center justify-center gap-2 rounded-full border border-neutral-900 bg-neutral-950 px-6 py-2.5 text-base text-zinc-200 leading-relaxed font-mono">
             <span>🔧 Custom spec tuning or motor swaps require advanced mapping services.</span>
             <button 
               onClick={() => onSelectService('ecu-tuning')}

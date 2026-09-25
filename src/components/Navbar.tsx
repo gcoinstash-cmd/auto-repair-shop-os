@@ -51,7 +51,7 @@ export default function Navbar({ onNavigate, activeSection, shopName, onOpenAdmi
                   <div className="flex items-center space-x-1">
                     <span className="text-white uppercase font-bold">{firstWord}</span>
                     <span className="text-accent-orange font-light">//</span>
-                    <span className="text-zinc-500 font-medium uppercase">{restWords}</span>
+                    <span className="text-zinc-300 font-medium uppercase">{restWords}</span>
                   </div>
                 );
               })()
@@ -59,7 +59,7 @@ export default function Navbar({ onNavigate, activeSection, shopName, onOpenAdmi
               <>
                 <span className="text-white">APEX</span>
                 <span className="text-accent-orange font-light mx-1">//</span>
-                <span className="text-zinc-500 font-medium font-display">DYNAMICS</span>
+                <span className="text-zinc-300 font-medium font-display">DYNAMICS</span>
               </>
             )}
           </div>
@@ -99,7 +99,7 @@ export default function Navbar({ onNavigate, activeSection, shopName, onOpenAdmi
           {onOpenAdmin && (
             <button
               onClick={onOpenAdmin}
-              className="rounded-md border border-accent-orange/40 bg-accent-orange/10 px-3 py-2 text-[10px] font-mono uppercase tracking-widest text-accent-orange hover:bg-accent-orange/20 transition-all cursor-pointer"
+              className="rounded-md border border-accent-orange/40 bg-accent-orange/10 px-3 py-2 text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono uppercase tracking-widest text-accent-orange hover:bg-accent-orange/20 transition-all cursor-pointer"
             >
               [ ADMIN PASS ]
             </button>
@@ -116,7 +116,7 @@ export default function Navbar({ onNavigate, activeSection, shopName, onOpenAdmi
 
         {/* Mobile Navigation Trigger */}
         <div className="flex md:hidden items-center space-x-3">
-          <div className="flex items-center space-x-1.5 rounded-full border border-neutral-800 bg-neutral-950 px-2 py-1 text-[10px] font-mono leading-none">
+          <div className="flex items-center space-x-1.5 rounded-full border border-neutral-800 bg-neutral-950 px-2 py-1 text-xs font-semibold tracking-wider font-mono leading-none">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="text-emerald-400 font-bold uppercase sm:hidden">2 BAYS</span>
             <span className="text-emerald-400 font-bold uppercase hidden sm:inline">2 BAYS OPEN</span>

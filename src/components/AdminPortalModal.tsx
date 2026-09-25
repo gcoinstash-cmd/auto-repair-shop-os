@@ -83,13 +83,13 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                   <ShieldCheck className="h-4.5 w-4.5 text-orange-500" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Auto Repair OS</p>
+                  <p className="text-xs font-mono text-zinc-300 uppercase tracking-widest">Auto Repair OS</p>
                   <h2 className="text-sm font-bold text-white uppercase tracking-wider">Admin Portal</h2>
                 </div>
               </div>
               <button
                 onClick={onClose}
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-800 text-zinc-500 hover:text-white hover:border-neutral-600 transition-all cursor-pointer"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-800 text-zinc-300 hover:text-white hover:border-neutral-600 transition-all cursor-pointer"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -107,7 +107,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white uppercase tracking-wider mt-4">Garage Admin Access</h3>
-                    <p className="text-xs text-zinc-500 font-mono max-w-xs mx-auto">Enter the admin passkey or use the 1-click auto-fill for the live demo.</p>
+                    <p className="text-xs text-zinc-300 font-mono max-w-xs mx-auto">Enter the admin passkey or use the 1-click auto-fill for the live demo.</p>
                   </div>
 
                   <div className="w-full max-w-sm space-y-3">
@@ -123,14 +123,14 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
 
                     <button
                       onClick={handleAuth}
-                      className="w-full rounded-lg bg-orange-500 py-3 text-sm font-bold uppercase tracking-wider text-black hover:bg-orange-400 transition-all cursor-pointer"
+                      className="w-full rounded-lg bg-orange-500 py-3 text-base font-bold min-h-[44px] uppercase tracking-wider text-black hover:bg-orange-400 transition-all cursor-pointer"
                     >
                       Unlock Portal
                     </button>
 
                     <button
                       onClick={handleAutoFill}
-                      className="w-full rounded-lg border border-orange-500/30 bg-orange-500/5 py-2.5 text-xs font-mono text-orange-400 hover:bg-orange-500/10 transition-all cursor-pointer"
+                      className="w-full rounded-lg border border-orange-500/30 bg-orange-500/5 py-2.5 text-base font-semibold min-h-[44px] font-mono text-orange-400 hover:bg-orange-500/10 transition-all cursor-pointer"
                     >
                       [ 1-CLICK DEMO AUTO-FILL: autorepair2026 ]
                     </button>
@@ -153,7 +153,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                         className={`flex-1 flex items-center justify-center gap-1.5 rounded-md py-2 text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
                           activeTab === id
                             ? 'bg-orange-500 text-black font-bold'
-                            : 'text-zinc-500 hover:text-zinc-300'
+                            : 'text-zinc-300 hover:text-zinc-300'
                         }`}
                       >
                         <Icon className="h-3 w-3" />
@@ -170,7 +170,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                           <div key={label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-4 space-y-2">
                             <Icon className={`h-4 w-4 ${color}`} />
                             <p className={`text-xl font-bold font-mono ${color}`}>{value}</p>
-                            <p className="text-[10px] text-zinc-500 uppercase tracking-wider">{label}</p>
+                            <p className="text-xs font-semibold tracking-wider text-zinc-300 uppercase tracking-wider">{label}</p>
                           </div>
                         ))}
                       </div>
@@ -183,10 +183,10 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                                 <Clock className="h-3.5 w-3.5 text-zinc-600" />
                                 <div>
                                   <p className="text-xs font-medium text-zinc-200">{b.customer}</p>
-                                  <p className="text-[10px] text-zinc-500 font-mono">{b.service}</p>
+                                  <p className="text-xs font-semibold tracking-wider text-zinc-300 font-mono">{b.service}</p>
                                 </div>
                               </div>
-                              <span className={`text-[10px] font-mono px-2 py-0.5 rounded border uppercase ${statusColors[b.status]}`}>
+                              <span className={`text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded border uppercase ${statusColors[b.status]}`}>
                                 {b.status}
                               </span>
                             </div>
@@ -203,11 +203,11 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                         <div key={b.id} className="rounded-xl border border-neutral-800 bg-neutral-950 p-4 flex items-center justify-between gap-3">
                           <div className="space-y-1">
                             <div className="flex items-center gap-2">
-                              <span className="text-[10px] font-mono text-zinc-600">{b.id}</span>
-                              <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded border uppercase ${statusColors[b.status]}`}>{b.status}</span>
+                              <span className="text-xs font-semibold tracking-wider font-mono text-zinc-600">{b.id}</span>
+                              <span className={`text-xs font-semibold tracking-wider font-mono px-1.5 py-0.5 rounded border uppercase ${statusColors[b.status]}`}>{b.status}</span>
                             </div>
                             <p className="text-sm font-medium text-zinc-200">{b.customer}</p>
-                            <p className="text-xs text-zinc-500 font-mono">{b.service} · {b.time}</p>
+                            <p className="text-xs text-zinc-300 font-mono">{b.service} · {b.time}</p>
                           </div>
                           <div className="text-right">
                             <p className="text-lg font-bold text-orange-400 font-mono">${b.amount}</p>
@@ -230,10 +230,10 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                         <div key={b.bay} className={`rounded-xl border p-4 space-y-2 ${b.color === 'orange' ? 'border-orange-500/20 bg-orange-500/5' : 'border-emerald-500/20 bg-emerald-500/5'}`}>
                           <div className="flex items-center justify-between">
                             <span className="text-xs font-bold font-mono text-white uppercase">{b.bay}</span>
-                            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full uppercase font-bold ${b.color === 'orange' ? 'text-orange-400 bg-orange-400/10' : 'text-emerald-400 bg-emerald-400/10'}`}>{b.status}</span>
+                            <span className={`text-xs font-semibold tracking-wider font-mono px-2 py-0.5 rounded-full uppercase font-bold ${b.color === 'orange' ? 'text-orange-400 bg-orange-400/10' : 'text-emerald-400 bg-emerald-400/10'}`}>{b.status}</span>
                           </div>
                           <p className="text-sm text-zinc-300">{b.vehicle}</p>
-                          <p className="text-xs text-zinc-500 font-mono">Tech: {b.tech}</p>
+                          <p className="text-xs text-zinc-300 font-mono">Tech: {b.tech}</p>
                         </div>
                       ))}
                     </div>
@@ -252,7 +252,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                           { label: 'Template Version', value: 'v1.0.0' },
                         ].map(({ label, value }) => (
                           <div key={label} className="flex justify-between items-center py-2 border-b border-neutral-800/60 last:border-0">
-                            <span className="text-xs text-zinc-500 font-mono uppercase">{label}</span>
+                            <span className="text-xs text-zinc-300 font-mono uppercase">{label}</span>
                             <span className="text-xs text-zinc-200 font-mono">{value}</span>
                           </div>
                         ))}

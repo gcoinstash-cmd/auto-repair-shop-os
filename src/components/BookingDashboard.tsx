@@ -211,7 +211,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
             Interactive Calibration Scheduler
           </h2>
-          <p className="text-zinc-500 font-sans text-sm font-light">
+          <p className="text-zinc-300 font-sans text-sm font-light">
             Configure your mechanical specifications, select diagnostic tuning parameters, select a designated scheduling block, and generate your live trackable Ticket ID.
           </p>
         </div>
@@ -244,7 +244,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                   ))}
                 </div>
                 
-                <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest hidden sm:inline">
+                <span className="font-mono text-xs text-zinc-300 uppercase tracking-widest hidden sm:inline">
                   Step {step} of 4: {
                     step === 1 ? 'Select Vehicle' :
                     step === 2 ? 'Calibrate Service' :
@@ -272,7 +272,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Enter Vehicle Matrix Specifications
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Select the base chassis type and input your vehicle make and model. This allows our hardware mechanics to allocate proper lifts.
                       </p>
                     </div>
@@ -383,7 +383,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                                 </div>
                                 <span className="font-display font-bold text-sm uppercase tracking-wide">{type.label}</span>
                               </div>
-                              <p className="text-[11px] font-sans text-zinc-500 leading-normal">{type.desc}</p>
+                              <p className="text-xs font-semibold font-sans text-zinc-300 leading-normal">{type.desc}</p>
                             </div>
                             
                             {/* SVG Silhouette placeholder */}
@@ -410,7 +410,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                               <Sparkles className="h-3.5 w-3.5 text-accent-orange" />
                               Select High-Ticket Archetype Model
                             </span>
-                            <span className="text-[10px] uppercase text-zinc-500 font-sans hidden sm:inline">
+                            <span className="text-xs font-semibold tracking-wider uppercase text-zinc-300 font-sans hidden sm:inline">
                               Instantly configures parameters
                             </span>
                           </div>
@@ -432,7 +432,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                                       : 'border-neutral-800 bg-neutral-950 text-zinc-400 hover:border-neutral-700 hover:text-white'
                                   }`}
                                 >
-                                  <span className="block text-[9px] text-zinc-500 font-mono uppercase leading-none mb-1">{item.make}</span>
+                                  <span className="block text-[9px] text-zinc-300 font-mono uppercase leading-none mb-1">{item.make}</span>
                                   <span className="block truncate font-display text-[10.5px] uppercase tracking-wide">{item.model}</span>
                                   {isSelectedModel && (
                                     <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-accent-orange" />
@@ -448,7 +448,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                     {/* Make and Model inputs */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="vehicle-make">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="vehicle-make">
                           Chassis Make (Brand) *
                         </label>
                         <input
@@ -463,7 +463,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="vehicle-model">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="vehicle-model">
                           Exact Model Designation *
                         </label>
                         <input
@@ -494,7 +494,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Configure Specialty Calibration Service
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Select your necessary mechanical specialty tune or maintenance package. Values represent precision base diagnostics.
                       </p>
                     </div>
@@ -521,7 +521,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                                 <span className={`block font-display text-sm font-bold uppercase tracking-wide ${isSelected ? 'text-accent-orange' : 'text-white'}`}>
                                   {srv.name}
                                 </span>
-                                <span className="block text-[11px] text-zinc-400 line-clamp-1 font-sans">{srv.description}</span>
+                                <span className="block text-xs font-semibold text-zinc-400 line-clamp-1 font-sans">{srv.description}</span>
                                 {srv.helperText && (
                                   <span className="block text-xs text-slate-400 mt-1 font-sans italic">
                                     {srv.helperText}
@@ -532,7 +532,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                             
                             <div className="text-right font-mono text-xs pl-4 shrink-0">
                               <span className="block font-bold text-white">${srv.estimatePrice}</span>
-                              <span className="block text-[10px] text-zinc-500 uppercase">{srv.duration}</span>
+                              <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">{srv.duration}</span>
                             </div>
                           </div>
                         );
@@ -555,7 +555,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Access Calibration Bay Timeslots
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Locate an open mechanical schedule block in our high-end service queue. Dates represents our live bay synchronization.
                       </p>
                     </div>
@@ -563,7 +563,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {/* Calendar Date Selection */}
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="booking-date">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="booking-date">
                           Designate Date *
                         </label>
                         <div className="relative">
@@ -576,14 +576,14 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                             className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-accent-orange font-mono"
                           />
                         </div>
-                        <span className="block text-[10px] text-zinc-500 font-mono">
+                        <span className="block text-xs font-semibold tracking-wider text-zinc-300 font-mono">
                           Note: Sunday scheduling closed for track safety audits.
                         </span>
                       </div>
 
                       {/* Time Slots grid picker */}
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300">
                           Designate Shift block *
                         </label>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -624,14 +624,14 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-lg font-bold uppercase tracking-wider text-white">
                         Customer Signature & Direct Contact
                       </h3>
-                      <p className="text-xs text-zinc-400 font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed font-light">
                         Provide diagnostic delivery contact instructions. We do not distribute credentials; updates are fully local and trackable.
                       </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="customer-name">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="customer-name">
                           Owner Full Name *
                         </label>
                         <input
@@ -646,7 +646,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="customer-email">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="customer-email">
                           Contact Email Address *
                         </label>
                         <input
@@ -661,7 +661,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2 sm:col-span-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="customer-phone">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="customer-phone">
                           Phone Signal Terminal (Updates via SMS) *
                         </label>
                         <input
@@ -676,7 +676,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
 
                       <div className="space-y-2 sm:col-span-2">
-                        <label className="block text-xs font-mono uppercase text-zinc-500" htmlFor="customer-notes">
+                        <label className="block text-sm font-semibold font-mono uppercase text-zinc-300" htmlFor="customer-notes">
                           Hardware Alterations or Mechanical Notes (Optional)
                         </label>
                         <textarea
@@ -709,7 +709,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <h3 className="font-display text-2xl font-black uppercase text-white tracking-wide">
                         Hardware Manifest Approved!
                       </h3>
-                      <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                      <p className="text-base text-zinc-200 leading-relaxed leading-relaxed font-light">
                         Your vehicle session is locked inside our bay directory. Capture the custom dynamic diagnostics code below to verify your vehicle repair progress at any point.
                       </p>
                     </div>
@@ -722,7 +722,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       {/* Ticket heading barcode status */}
                       <div className="flex items-center justify-between pb-4 border-b border-neutral-900">
                         <div className="space-y-0.5">
-                          <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">RECEIPT BARCODE ID</span>
+                          <span className="text-[9px] font-mono text-zinc-300 uppercase tracking-widest">RECEIPT BARCODE ID</span>
                           <span className="block font-mono text-xs font-bold text-white tracking-widest uppercase">APEX//DYNAMICS//CALIBRATE</span>
                         </div>
                         <div className="self-end text-right">
@@ -735,38 +735,38 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       {/* Ticket Fields specs */}
                       <div className="grid grid-cols-2 gap-4 font-mono text-xs">
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Active Ticket ID</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Active Ticket ID</span>
                           <span className="block font-bold text-accent-orange text-sm font-display tracking-wider">
                             {generatedTicket.ticketId}
                           </span>
                         </div>
 
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Terminal Name</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Terminal Name</span>
                           <span className="block font-semibold text-zinc-200 truncate">{generatedTicket.customerName}</span>
                         </div>
 
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Locked Chassis</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Locked Chassis</span>
                           <span className="block font-semibold text-zinc-200 capitalize">
                             {generatedTicket.vehicleMake} {generatedTicket.vehicleModel}
                           </span>
                         </div>
 
                         <div>
-                          <span className="block text-[10px] text-zinc-500 uppercase">Calibration Base</span>
+                          <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Calibration Base</span>
                           <span className="block font-semibold text-zinc-200 truncate">{selectedService.name}</span>
                         </div>
 
                         <div className="col-span-2 pt-2 border-t border-neutral-900 flex justify-between items-center bg-neutral-900/40 p-3 rounded-lg border border-neutral-900">
                           <div>
-                            <span className="block text-[10px] text-zinc-500 uppercase">Appointmt Window</span>
-                            <span className="block text-[11px] font-bold text-white">
+                            <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase">Appointmt Window</span>
+                            <span className="block text-xs font-semibold font-bold text-white">
                               {generatedTicket.selectedDate} @ {generatedTicket.selectedTime}
                             </span>
                           </div>
                           <div className="text-right">
-                            <span className="block text-[10px] text-zinc-400 uppercase">Est Total</span>
+                            <span className="block text-xs font-semibold tracking-wider text-zinc-400 uppercase">Est Total</span>
                             <span className="block text-sm font-bold text-accent-orange font-display">from ${generatedTicket.priceEstimate}</span>
                           </div>
                         </div>
@@ -777,7 +777,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                         <button
                           type="button"
                           onClick={handleCopyTicketId}
-                          className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 px-4 py-3 text-center text-xs font-mono font-semibold text-zinc-300 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                          className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 px-4 py-3 text-center text-base font-semibold min-h-[44px] font-mono font-semibold text-zinc-300 flex items-center justify-center gap-2 transition-all cursor-pointer"
                         >
                           <Copy className="h-4 w-4 text-accent-orange" />
                           <span>{copied ? 'Copied to Clipboard!' : 'Copy Ticket Code'}</span>
@@ -785,7 +785,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       </div>
                     </div>
 
-                    <p className="text-[11px] text-zinc-500 font-sans max-w-sm mx-auto leading-relaxed text-center">
+                    <p className="text-xs font-semibold text-zinc-300 font-sans max-w-sm mx-auto leading-relaxed text-center">
                       ℹ️ Automated Workflow: This module dynamically generates a crisp digital work order that you and your client can instantly reference.
                     </p>
 
@@ -800,7 +800,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                       <button
                         type="button"
                         onClick={handleResetBooking}
-                        className="w-full text-zinc-500 hover:text-white transition-colors py-2 text-xs font-mono uppercase tracking-wider"
+                        className="w-full text-zinc-300 hover:text-white transition-colors py-2 text-base font-semibold min-h-[44px] font-mono uppercase tracking-wider"
                       >
                         Schedule Another Vehicle
                       </button>
@@ -872,7 +872,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
               
               {/* Spec Type */}
               <div className="space-y-1">
-                <span className="text-[10px] text-zinc-500 uppercase">01/ Vehicle Structure</span>
+                <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">01/ Vehicle Structure</span>
                 <div className="flex items-center space-x-2 text-white">
                   <Car className="h-4 w-4 text-accent-orange shrink-0" />
                   <span className="font-medium capitalize text-zinc-300">
@@ -882,7 +882,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
                   </span>
                 </div>
                 {vehicleType && (
-                  <span className="block text-[10px] text-zinc-500 italic uppercase">
+                  <span className="block text-xs font-semibold tracking-wider text-zinc-300 italic uppercase">
                     Class Priority: {vehicleType} Spec
                   </span>
                 )}
@@ -890,7 +890,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
               {/* Service Spec */}
               <div className="space-y-1">
-                <span className="text-[10px] text-zinc-500 uppercase">02/ Calibration Class</span>
+                <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">02/ Calibration Class</span>
                 <div className="flex items-center space-x-2 text-white">
                   <Settings className="h-4 w-4 text-accent-orange shrink-0" />
                   <span className="font-medium text-zinc-300">
@@ -901,7 +901,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
               {/* Estimated Periodicity */}
               {selectedService && (
-                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-neutral-900/60 font-mono text-zinc-400 text-[11px]">
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-neutral-900/60 font-mono text-zinc-400 text-xs font-semibold">
                   <div>
                     <span className="block text-[9px] text-zinc-600 uppercase">Service Time</span>
                     <span className="font-medium text-zinc-300">{selectedService.duration}</span>
@@ -915,7 +915,7 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
               {/* Date Block */}
               <div className="space-y-1 pt-2 border-t border-neutral-900/60">
-                <span className="text-[10px] text-zinc-500 uppercase">03/ Time Sync Block</span>
+                <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">03/ Time Sync Block</span>
                 <div className="flex items-center justify-between text-zinc-200">
                   <div className="flex items-center space-x-2">
                     <Calendar className="h-4 w-4 text-accent-orange shrink-0" />
@@ -945,19 +945,19 @@ export default function BookingDashboard({ onAddBooking, selectedServiceId, clea
 
                 <div className="pt-3 border-t border-neutral-900 flex justify-between items-end">
                   <div className="font-display">
-                    <span className="block text-[10px] text-zinc-500 uppercase font-mono">DUE UPON RETRIEVAL</span>
+                    <span className="block text-xs font-semibold tracking-wider text-zinc-300 uppercase font-mono">DUE UPON RETRIEVAL</span>
                     <span className="text-xl font-bold text-white font-display">
                       ${selectedService ? selectedService.estimatePrice : 0}
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase pb-1 leading-none tracking-tight">TAXES INCLUDED</span>
+                  <span className="text-xs font-semibold tracking-wider font-mono text-zinc-300 uppercase pb-1 leading-none tracking-tight">TAXES INCLUDED</span>
                 </div>
               </div>
             </div>
 
             {/* Quality Pledge box */}
-            <div className="rounded-xl border border-neutral-900 bg-neutral-950/60 p-4 space-y-2 text-[11px] text-zinc-500 font-sans">
-              <div className="flex items-center space-x-2 text-zinc-300 font-mono text-[10px] uppercase font-bold">
+            <div className="rounded-xl border border-neutral-900 bg-neutral-950/60 p-4 space-y-2 text-xs font-semibold text-zinc-300 font-sans">
+              <div className="flex items-center space-x-2 text-zinc-300 font-mono text-xs font-semibold tracking-wider uppercase font-bold">
                 <ShieldCheck className="h-4 w-4 text-accent-orange" />
                 <span>Certified APEX Integrity</span>
               </div>

@@ -31,7 +31,7 @@ export default function LeadCapture() {
           
           {/* Left Column Text */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center space-x-2 rounded-full border border-accent-orange/15 bg-accent-orange/5 px-2.5 py-1 text-[10px] font-mono tracking-wider text-accent-orange uppercase">
+            <div className="inline-flex items-center space-x-2 rounded-full border border-accent-orange/15 bg-accent-orange/5 px-2.5 py-1 text-xs font-semibold tracking-wider font-mono tracking-wider text-accent-orange uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-accent-orange animate-pulse" />
               <span>Premium Tech Resources</span>
             </div>
@@ -41,7 +41,7 @@ export default function LeadCapture() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-white">Free Download.</span>
             </h3>
             
-            <p className="font-sans text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+            <p className="font-sans text-base sm:text-lg text-zinc-200 leading-relaxed font-light leading-relaxed max-w-2xl">
               Grab our verified 50-point track prep and alignment checklist used by professional calibration engineers to audit chassis stability before hitting the asphalt.
             </p>
           </div>
@@ -66,11 +66,11 @@ export default function LeadCapture() {
                 >
                   <div className="flex items-center space-x-2 pb-2 border-b border-neutral-900">
                     <Terminal className="h-4 w-4 text-accent-orange" />
-                    <span className="font-mono text-[10px] uppercase text-zinc-500 tracking-widest">DIGITAL ACCESS PORTAL</span>
+                    <span className="font-mono text-xs font-semibold tracking-wider uppercase text-zinc-300 tracking-widest">DIGITAL ACCESS PORTAL</span>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="block text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+                    <label className="block text-sm font-semibold tracking-wider font-mono text-zinc-300 uppercase tracking-widest">
                       ENTER YOUR EMAIL ADDRESS
                     </label>
                     <div className="relative">
@@ -90,7 +90,7 @@ export default function LeadCapture() {
                       />
                     </div>
                     {errorVisible && (
-                      <p className="text-[10px] font-mono text-red-400 mt-1">
+                      <p className="text-xs font-semibold tracking-wider font-mono text-red-400 mt-1">
                         * Please input a valid standard diagnostic email.
                       </p>
                     )}
@@ -98,13 +98,13 @@ export default function LeadCapture() {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-accent-orange to-accent-orange/90 hover:from-accent-orange hover:to-orange-500 text-black font-display font-black text-xs uppercase tracking-wider py-3 px-6 rounded transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shadow-lg shadow-accent-orange/15"
+                    className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-accent-orange to-accent-orange/90 hover:from-accent-orange hover:to-orange-500 text-black font-display font-black text-base font-semibold min-h-[44px] uppercase tracking-wider py-3 px-6 rounded transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shadow-lg shadow-accent-orange/15"
                   >
                     <Download className="h-4.5 w-4.5 stroke-[3px]" />
                     <span>GENERATE DIGITAL ACCESS</span>
                   </button>
                   
-                  <p className="text-[10px] font-mono text-zinc-600 text-center leading-normal">
+                  <p className="text-xs font-semibold tracking-wider font-mono text-zinc-600 text-center leading-normal">
                     Secure channel. Zero spam. Precision deliverables only.
                   </p>
                 </motion.form>
@@ -124,7 +124,7 @@ export default function LeadCapture() {
                     <p className="font-mono text-xs uppercase tracking-widest text-accent-orange font-bold">
                       CHECKLIST TRANSMITTED // CHECK YOUR INBOX
                     </p>
-                    <p className="font-sans text-xs text-zinc-400 leading-relaxed font-light">
+                    <p className="font-sans text-base text-zinc-200 leading-relaxed leading-relaxed font-light">
                       The dynamic 50-point diagnostic checklist PDF was successfully routed to <span className="text-white font-mono">{email}</span>. Review critical chassis checks prior to runway calibration.
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function LeadCapture() {
                       setSubmitted(false);
                       setEmail('');
                     }}
-                    className="inline-flex items-center space-x-1 font-mono text-[10px] uppercase text-zinc-500 hover:text-accent-orange transition-colors cursor-pointer"
+                    className="inline-flex items-center space-x-1 font-mono text-xs font-semibold tracking-wider uppercase text-zinc-300 hover:text-accent-orange transition-colors cursor-pointer"
                   >
                     <span>&lt; Send another transmission &gt;</span>
                   </button>
