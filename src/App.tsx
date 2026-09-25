@@ -384,7 +384,7 @@ export default function App() {
   const [customPhone, setCustomPhone] = useState('(310) 555-0142');
 
   useEffect(() => {
-    if (window.location.pathname === '/admin') {
+    if ((window.location.pathname.includes('admin') || window.location.hash.includes('admin'))) {
       setIsAdminOpen(true);
     }
   }, []);
